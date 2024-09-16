@@ -8,8 +8,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Date dataHoraAtual = new Date();
-        String hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
+
 
 
         Subscriver gestor = new Subscriver("Gestor");
@@ -26,14 +25,14 @@ public class Main {
 
 
         while (true){
+            Date dataHoraAtual = new Date();
+            String hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
             System.out.println("--------"+hora+"--------");
             maquina1.notifySubscriver(maquina1.getNome());
             maquina2.notifySubscriver(maquina2.getNome());
             maquina3.notifySubscriver(maquina3.getNome());
             maquina4.notifySubscriver(maquina4.getNome());
             Thread.sleep(10000);
-            dataHoraAtual = new Date();
-            hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
         }
     }
 }
