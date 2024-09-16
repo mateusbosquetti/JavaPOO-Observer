@@ -3,6 +3,10 @@ import java.util.List;
 
 public abstract class Publisher {
 
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
     private List<Subscriver> subscrivers;
 
     public Publisher(List<Subscriver> subscrivers) {
@@ -24,12 +28,12 @@ public abstract class Publisher {
         if (valor > 50){
             for (Subscriver s: subscrivers) {
                 if (s.getNome().equals("Painel de Controle")){
-                    s.notify(nome+ ": Update");
+                    s.notify(ANSI_GREEN+nome+  ": Update" + ANSI_RESET);
                 }
             }
         } else {
             for (Subscriver s: subscrivers) {
-                s.notify(nome+ ": Erro");
+                s.notify(ANSI_RED + nome+": Erro" + ANSI_RESET);
             }
         }
 
