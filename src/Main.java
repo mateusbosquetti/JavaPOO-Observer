@@ -9,10 +9,10 @@ public class Main {
 
         List<Subscriver> subscrivers = List.of(gestor, operdador, painel);
 
-        Maquina1 maquina1 = new Maquina1(subscrivers, "Maquina1");
-        Maquina1 maquina2 = new Maquina1(subscrivers, "Maquina2");
-        Maquina1 maquina3 = new Maquina1(subscrivers, "Maquina3");
-        Maquina1 maquina4 = new Maquina1(subscrivers, "Maquina4");
+        Maquina maquina1 = new Maquina(subscrivers, "Maquina1");
+        Maquina maquina2 = new Maquina(subscrivers, "Maquina2");
+        Maquina maquina3 = new Maquina(subscrivers, "Maquina3");
+        Maquina maquina4 = new Maquina(subscrivers, "Maquina4");
 
 
         while (true){
